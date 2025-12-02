@@ -1,18 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import Topbar from './components/Topbar'
+import Dashboard from './components/Dashboard'
+import ModernSidebar from './components/ModernSidebar'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <div className='min-h-screen bg-amber-400'>
-hello
-    </div>
+    <div className="min-h-screen bg-gray-50 text-gray-900 flex">
+      <ModernSidebar />
 
-    </>
+      <div className="flex-1 flex flex-col">
+        <Topbar />
+        <div className="flex-1 overflow-auto">
+          <Dashboard />
+        </div>
+      </div>
+    </div>
   )
 }
 

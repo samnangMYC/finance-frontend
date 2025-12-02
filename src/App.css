@@ -1,0 +1,8 @@
+/* App-specific styles (kept minimal since Tailwind is used) */
+
+/* Example: set a default font-smoothing */
+html,
+body,
+#root {
+    height: 100%;
+}
