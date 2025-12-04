@@ -1,21 +1,19 @@
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
-import Topbar from './components/Topbar'
-import Dashboard from './components/Dashboard'
-import ModernSidebar from './components/ModernSidebar'
+import AdminDashboardLayout from './AdminDashboardLayout';
+import Dashboard from './components/Dashboard.jsx';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 flex">
-      <ModernSidebar />
-
-      <div className="flex-1 flex flex-col">
-        <Topbar />
-        <div className="flex-1 overflow-auto">
-          <Dashboard />
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<div className="p-6"> <h1 className="text-2xl font-semibold">Home Page</h1> </div>} />
+        <Route path="/dashboard" element={<AdminDashboardLayout />}>
+          <Route index element={<Dashboard /> } />
+          <Route path="account" element={<div className="p-6"> <h1 className="text-2xl font-semibold">Accounts Page</h1> </div>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
