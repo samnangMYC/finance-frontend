@@ -1,9 +1,10 @@
-import React from 'react'
+
 import ModernSidebar from './components/ModernSidebar'
 import Topbar from './components/Topbar'
 import { Outlet } from 'react-router-dom'
 
 const AdminDashboardLayout = () => {
+  
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 flex">
       <ModernSidebar />

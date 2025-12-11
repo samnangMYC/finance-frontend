@@ -29,7 +29,8 @@ const ModernSidebar = () => {
             toggle: toggleAccounts,
             navigate: "",
             children: [
-            { title: "Total Accounts", icon: <MdDoubleArrow className="h-4 w-4" />, navigate: "/dashboard/account" }
+            { title: "Total Accounts", icon: <MdDoubleArrow className="h-4 w-4" />, navigate: "/dashboard/account" },
+            { title: "Add Account", icon: <MdDoubleArrow className="h-4 w-4" />, navigate: "/dashboard/account/add" }
             ]
         }
     ];
@@ -37,9 +38,11 @@ const ModernSidebar = () => {
     return (
         <aside className="hidden md:block min-w-[250px] bg-white dark:bg-gray-800 text-gray-800 dark:text-slate-200 font-sans">
             
-            <div className="h-20 flex items-center justify-center text-xl font-bold">
+            <Link to={"/dashboard"}>
+            <div className="h-20 hover:cursor-pointer flex items-center justify-center text-xl font-bold">
                 DashCode
             </div>
+            </Link>
 
             <div className="uppercase text-sm mx-9 py-3 text-gray-500 dark:text-gray-400">
                 Menu
